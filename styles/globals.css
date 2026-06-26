@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Clash Display', sans-serif;
+  }
+}
+
+.login-input:-webkit-autofill,
+.login-input:-webkit-autofill:hover,
+.login-input:-webkit-autofill:focus,
+.login-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(38, 48, 59, 0.45) inset !important;
+  box-shadow: 0 0 0 1000px rgba(38, 48, 59, 0.45) inset !important;
+  -webkit-text-fill-color: #faf7ef !important;
+  caret-color: #faf7ef;
+  transition: background-color 9999s ease-out 0s;
+}

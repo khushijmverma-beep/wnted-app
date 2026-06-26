@@ -1,0 +1,70 @@
+.depositScroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.22) transparent;
+}
+
+.cardGlow {
+  box-shadow:
+    0 0 18px rgba(90, 112, 133, 0.38),
+    0 0 36px rgba(74, 95, 115, 0.28),
+    0 0 56px rgba(53, 69, 82, 0.2);
+}
+
+.depositScroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.depositScroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+.drawerPanel {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.drawerPanelOpen {
+  transform: translateX(0);
+}
+
+.amountInputWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.amountInput {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.amountInput::-webkit-outer-spin-button,
+.amountInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amountStepper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.amountStepBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.75;
+  line-height: 0;
+  transition: opacity 0.15s ease;
+}
+
+.amountStepBtn:hover {
+  opacity: 1;
+}
