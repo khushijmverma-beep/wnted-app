@@ -78,3 +78,171 @@
     transform: translateX(0);
   }
 }
+
+.tabUnderlineCenter {
+  position: relative;
+}
+
+.tabUnderlineCenter::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 20px;
+  height: 2px;
+  margin-left: -10px;
+  border-radius: 999px;
+  background: #ffffff;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+.tabUnderlineCenterActive::after {
+  transform: scale(1);
+}
+
+.tabUnderlineFull {
+  position: relative;
+}
+
+.tabUnderlineFull::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: #8a97a8;
+  opacity: 1;
+  transform: scale(0);
+  transform-origin: center;
+  transition: transform 0.75s ease;
+  pointer-events: none;
+}
+
+.tabUnderlineFullActive::after {
+  transform: scale(1);
+}
+
+.spinWheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid rgba(250, 247, 239, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(138, 151, 168, 0.08);
+  transition: transform 4.8s cubic-bezier(0.15, 0.85, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.spinWheelIdle {
+  transition: none;
+}
+
+.spinWheelHub {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  border-radius: 50%;
+  background: rgba(250, 247, 239, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(250, 247, 239, 0.14);
+}
+
+.spinWheelLabel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+
+.spinWheelLabelText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 36px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  color: #faf7ef;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.spinWidgetPill {
+  background: rgba(250, 247, 239, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(250, 247, 239, 0.14);
+  animation: spinWidgetGlow 2.8s ease-in-out infinite;
+}
+
+@keyframes spinWidgetGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 14px rgba(138, 151, 168, 0.28),
+      inset 0 0 0 1px rgba(250, 247, 239, 0.1);
+  }
+
+  50% {
+    box-shadow:
+      0 0 26px rgba(138, 151, 168, 0.5),
+      inset 0 0 0 1px rgba(250, 247, 239, 0.18);
+  }
+}
+
+.spinTimerGlow {
+  text-shadow:
+    0 0 12px rgba(138, 151, 168, 0.55),
+    0 0 24px rgba(138, 151, 168, 0.35);
+  animation: spinTimerPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes spinTimerPulse {
+  0%,
+  100% {
+    text-shadow:
+      0 0 10px rgba(138, 151, 168, 0.45),
+      0 0 20px rgba(138, 151, 168, 0.25);
+    opacity: 0.85;
+  }
+
+  50% {
+    text-shadow:
+      0 0 18px rgba(138, 151, 168, 0.75),
+      0 0 36px rgba(138, 151, 168, 0.45);
+    opacity: 1;
+  }
+}
+
+.spinModalGlass {
+  background: rgba(250, 247, 239, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(250, 247, 239, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.drawerPanel {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.drawerPanelOpen {
+  transform: translateX(0);
+  pointer-events: auto;
+}

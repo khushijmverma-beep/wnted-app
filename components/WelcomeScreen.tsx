@@ -75,7 +75,7 @@ export default function WelcomeScreen() {
   };
 
   return (
-    <div className="min-h-screen bg-[#26303B] flex items-center justify-center font-clash">
+    <div className="flex min-h-screen items-center justify-center bg-black font-clash">
       <div
         className="relative overflow-hidden"
         style={{
@@ -83,23 +83,9 @@ export default function WelcomeScreen() {
           height: '844px',
           borderRadius: '40px',
           border: '1px solid rgba(250,247,239,0.08)',
+          background: '#000000',
         }}
       >
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/SandDunes.png')" }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(180deg, rgba(38,48,59,0.22) 0%, rgba(250,247,239,0.08) 40%, rgba(38,48,59,0.55) 100%)',
-            }}
-          />
-        </div>
-
         {/* Header */}
         <header className="relative z-10 flex items-center gap-3 px-6 pt-[52px]">
           <WntedLogo size={32} />

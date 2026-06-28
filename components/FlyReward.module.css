@@ -1,0 +1,28 @@
+@keyframes rewardPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rewardToast {
+  animation: rewardPop 0.9s ease-out forwards;
+}
+
+.depositRewardToast {
+  animation: rewardPop 1.4s ease-out forwards;
+}

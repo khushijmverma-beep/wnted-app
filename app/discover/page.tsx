@@ -198,7 +198,7 @@ export default function DiscoverPage() {
   }, []);
 
   return (
-    <AppPageLayout>
+    <AppPageLayout phoneBackground="ink">
       <div
         className={`flex h-full flex-col overflow-y-auto px-4 pt-[36px] pb-[90px] text-white font-clash ${styles.discoverScroll}`}
       >
