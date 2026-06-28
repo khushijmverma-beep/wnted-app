@@ -35,6 +35,11 @@ const inputBarStyle: React.CSSProperties = {
   border: '1px solid rgba(250,247,239,0.12)',
 };
 
+const initialsAvatarStyle: React.CSSProperties = {
+  background: 'transparent',
+  border: '1.5px solid rgba(143,168,188,0.4)',
+};
+
 type ProfileInboxChatViewProps = {
   participant: InboxChatParticipant;
   messages: InboxChatMessage[];
@@ -93,7 +98,7 @@ export default function ProfileInboxChatView({
           ) : (
             <div
               className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[11px] font-semibold text-white"
-              style={{ background: participant.color }}
+              style={initialsAvatarStyle}
             >
               {participant.initials}
             </div>

@@ -17,6 +17,11 @@ import ProfileInboxChatView, {
 } from '@/components/ProfileInboxChatView';
 import styles from '@/app/home/home.module.css';
 
+const initialsAvatarStyle: React.CSSProperties = {
+  background: 'transparent',
+  border: '1.5px solid rgba(143,168,188,0.4)',
+};
+
 type FriendChat = {
   id: string;
   name: string;
@@ -541,17 +546,10 @@ export default function ProfileInboxDrawer({
               >
                 <div className="relative">
                   <div
-                    className="flex h-[54px] w-[54px] items-center justify-center rounded-full"
-                    style={{
-                      border: '1.5px solid rgba(143,168,188,0.4)',
-                    }}
+                    className="flex h-[54px] w-[54px] items-center justify-center rounded-full text-[12px] font-semibold text-white"
+                    style={initialsAvatarStyle}
                   >
-                    <div
-                      className="flex h-[48px] w-[48px] items-center justify-center rounded-full text-[12px] font-semibold text-white"
-                      style={{ background: friend.color }}
-                    >
-                      {friend.initials}
-                    </div>
+                    {friend.initials}
                   </div>
                   <span
                     className="absolute -bottom-0.5 -right-0.5 flex h-[16px] w-[16px] items-center justify-center rounded-full"
@@ -629,7 +627,7 @@ export default function ProfileInboxDrawer({
                       <div className="flex items-center gap-3">
                         <div
                           className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[11px] font-semibold text-white"
-                          style={{ background: trade.color }}
+                          style={initialsAvatarStyle}
                         >
                           {trade.initials}
                         </div>
@@ -831,7 +829,7 @@ export default function ProfileInboxDrawer({
               >
                 <div
                   className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full text-[12px] font-semibold text-white"
-                  style={{ background: chat.color }}
+                  style={initialsAvatarStyle}
                 >
                   {chat.initials}
                 </div>
