@@ -1,0 +1,393 @@
+.shell {
+  --alt-bg: #fafaff;
+  --alt-surface: #ffffff;
+  --alt-blue: #a5b4fc;
+  --alt-blue-soft: #e8ecff;
+  --alt-blue-light: #e8ecff;
+  --alt-blue-text: #5c62a8;
+  --alt-text: #12131a;
+  --alt-muted: #8b90a0;
+  --alt-border: #e7eaf2;
+  --alt-image-bg: #f1f3f6;
+  --alt-progress-track: #eceff2;
+  --alt-nav-bg: rgba(255, 255, 255, 0.94);
+  --alt-shadow: 0 10px 30px rgba(18, 19, 26, 0.06);
+  background: var(--alt-bg);
+  color: var(--alt-text);
+}
+
+.shellDark {
+  --alt-bg: #0a0a0c;
+  --alt-surface: #141418;
+  --alt-blue-soft: #1c1e2e;
+  --alt-blue-light: #1c1e2e;
+  --alt-text: #f2f3f7;
+  --alt-muted: #9a9eae;
+  --alt-border: #2a2a34;
+  --alt-image-bg: #1e1e24;
+  --alt-progress-track: #2a2a32;
+  --alt-nav-bg: rgba(20, 20, 24, 0.94);
+  --alt-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.scroll {
+  scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: var(--alt-surface);
+  border-radius: 20px;
+  box-shadow: var(--alt-shadow);
+}
+
+.primaryBtn {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  background: var(--alt-blue);
+  color: var(--alt-blue-text);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 20px;
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  width: 100%;
+  border: 1px solid var(--alt-border);
+  border-radius: 16px;
+  background: var(--alt-surface);
+  color: var(--alt-text);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+.progressTrack {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--alt-progress-track);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--alt-blue);
+}
+
+.bottomNav {
+  height: 72px;
+  padding-bottom: 14px;
+  background: var(--alt-nav-bg);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--alt-border);
+}
+
+.navItemActive {
+  color: var(--alt-blue);
+}
+
+.dotRow {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #d0d7de;
+}
+
+.dotActive {
+  width: 22px;
+  background: var(--alt-blue);
+}
+
+.starBurst {
+  position: absolute;
+  pointer-events: none;
+  z-index: 120;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f5b301;
+  animation: starFloat 1.1s ease-out forwards;
+}
+
+@keyframes starFloat {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0) scale(0.6);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translate(-50%, -12px) scale(1.1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -72px) scale(0.9);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.92);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.08);
+    opacity: 0;
+  }
+}
+
+.milestoneRing {
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+  border: 2px solid rgba(165, 180, 252, 0.55);
+  animation: pulseRing 1.6s ease-out infinite;
+}
+
+.onboardingHero {
+  position: relative;
+  width: min(100%, 320px);
+  margin: 0 auto;
+}
+
+.onboardingImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.onboardingDiscoveryWrap {
+  position: relative;
+  width: min(100%, 300px);
+  margin: 0 auto;
+}
+
+.onboardingChoiceBtn {
+  position: absolute;
+  bottom: 8%;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.onboardingChoiceBtnSkip {
+  left: 4%;
+  width: 58px;
+  height: 58px;
+}
+
+.onboardingChoiceBtnWant {
+  right: 4%;
+  width: 58px;
+  height: 58px;
+}
+
+.statPill {
+  flex: 1;
+  border-radius: 16px;
+  background: var(--alt-surface);
+  box-shadow: var(--alt-shadow);
+  padding: 12px 8px;
+  text-align: center;
+}
+
+.pinnedGoalCard {
+  border-radius: 20px;
+  background: var(--alt-surface);
+  box-shadow: var(--alt-shadow);
+  overflow: hidden;
+}
+
+.pinBoard {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 7px;
+  gap: 8px;
+  align-items: start;
+}
+
+.pinCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 14px;
+  background: var(--alt-surface);
+  box-shadow: var(--alt-shadow);
+  min-height: 0;
+  height: 100%;
+}
+
+.pinImage {
+  position: relative;
+  flex: 1;
+  min-height: 48px;
+  background: var(--alt-image-bg);
+}
+
+.settingsSection {
+  margin-bottom: 20px;
+}
+
+.settingsSectionLabel {
+  margin-bottom: 8px;
+  padding: 0 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--alt-muted);
+}
+
+.settingsGroup {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--alt-surface);
+  box-shadow: var(--alt-shadow);
+}
+
+.settingsGroup .settingsRow {
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid var(--alt-border);
+}
+
+.settingsGroup .settingsRow:last-child {
+  border-bottom: none;
+}
+
+.settingsRowInner {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  align-items: center;
+  gap: 12px;
+}
+
+.settingsRowCopy {
+  min-width: 0;
+  flex: 1;
+}
+
+.settingsMeta {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--alt-muted);
+}
+
+.settingsRow {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: none;
+  background: var(--alt-surface);
+  color: var(--alt-text);
+  text-align: left;
+  padding: 14px 16px;
+}
+
+.toggleTrack {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--alt-border);
+  transition: background 0.2s ease;
+}
+
+.toggleTrackOn {
+  background: var(--alt-blue);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--alt-surface);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.toggleThumbOn {
+  transform: translateX(20px);
+}
+
+.pinMeta {
+  flex-shrink: 0;
+  padding: 5px 7px 6px;
+}
+
+.pinBadge {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  z-index: 2;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(18, 19, 26, 0.1);
+}
+
+.pinSpan18 {
+  grid-row-end: span 13;
+}
+
+.pinSpan20 {
+  grid-row-end: span 14;
+}
+
+.pinSpan22 {
+  grid-row-end: span 15;
+}
+
+.pinSpan24 {
+  grid-row-end: span 16;
+}
+
+.pinSpan28 {
+  grid-row-end: span 18;
+}
+
+.pinSpan30 {
+  grid-row-end: span 19;
+}
+
+.pinSpanWide {
+  grid-column: span 2;
+  grid-row-end: span 12;
+}
+
+.pinSpanWide .pinImage {
+  min-height: 56px;
+}
